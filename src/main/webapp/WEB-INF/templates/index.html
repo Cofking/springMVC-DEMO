@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+</head>
+<body>
+首页
+首页首页首页首页首页首页首页首页首页
+<a th:href="@{/tragt}">asd</a><br>
+<a th:href="@{/ava/testAnt}">?：表示任意的单个字符</a><br>
+<a th:href="@{/a4564a/testAnt}">*:表示任意的0个或多个字符</a><br>
+<a th:href="@{/as/ds//as/testAnt}">**：表示任意的一层或多层目录</a><br>
+<!--用th标签 动态获取浏览器上下文绝对路径-->
+
+<a th:href="@{/testAnt/123/admin}">SpringMVC支持路径中的占位符</a><br>
+
+<a th:href="@{/param}">测试请求参数</a><br>
+
+<form th:action="@{/RequsetBody}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit"> 测试RequestBody</form>
+
+<form th:action="@{/RequestEntity}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit"> 测试RequestEntity</form>
+
+
+<a th:href="@{/ResponseBody}">测试ResponseBody</a><br>
+
+
+
+</body>
+
+
+</html>

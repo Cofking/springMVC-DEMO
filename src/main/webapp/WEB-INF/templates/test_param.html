@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试请求参数</title>
+</head>
+<body>
+<h1>测试请求参数</h1>
+<a th:href="@{/one(name='admin',age=18)}">原生serverletAPI获取请求参数</a>
+<form th:action="@{/two}" method="post">
+    姓名：<input type="text" name="nameasd"><br>
+    年龄：<input type="text" name="age"><br>
+    爱好:<input type="checkbox" name="hobby" value="1">1
+    <input type="checkbox" name="hobby" value="2">2
+    <input type="checkbox" name="hobby" value="3">3
+    <input type="submit" value="通过控制器方法的形参获取请求参数">
+</form>
+
+<form th:action="@{/three}" method="post">
+    姓名：<input type="text" name="name"><br>
+    年龄：<input type="text" name="age"><br>
+    <input type="submit" value="通过实体类获取参数">
+</form>
+<a th:href="@{/textRequestByServletAPI}">向request域中共享数据</a><br>
+<a th:href="@{/testModelAndView}">用ModelAndView向request域中共享数据</a><br>
+<a th:href="@{/testModel}">用Model向request域中共享数据</a><br>
+<a th:href="@{/testMap}">用map向request域中共享数据</a><br>
+<a th:href="@{/testModelMap}">用testModelMaprequest域中共享数据</a><br>
+
+</body>
+</html>
